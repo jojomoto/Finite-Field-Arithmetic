@@ -65,28 +65,3 @@ class Field:
     def __rmul__(self, coefficient):
         x = (self.x * coefficient) % self.p
         return self.__class__(x, self.p)
-
-#a = Field(2,7)
-#b = Field(3,7)
-#print( a + b)
-
-##################TESTING####################
-def Testing():
-    #TEST 1
-    a1, b1, c1 = Field(2,7), Field(3,7), Field(5,7)
-    #TEST 2
-    a2, b2, c2 = Field(-2,7), Field(3,7), Field(1,7)
-    #TEST 3
-    a3, b3, c3 = Field(2,7), Field(-3,7), Field(6,7)
-    #TESTc4
-    a4, b4, c4 = Field(-2,7), Field(-3,7), Field(2,7)
-    print("Testing addition.")
-    print("\t{}:\n\t\t {} + {} \n\t\t\t\t== {}".format("Passed" if (a1 +b1 == c1) else "Failed", a1, b1, a1 + b1))        
-    print("\t{}:\n\t\t {} + {} \n\t\t\t\t== {}".format("Passed" if (a2 +b2 == c2) else "Failed", a2, b2, a2 + b2))        
-    print("\t{}:\n\t\t {} + {} \n\t\t\t\t== {}".format("Passed" if (a3 +b3 == c3) else "Failed", a3, b3, a3 + b3))        
-    print("\t{}:\n\t\t {} + {} \n\t\t\t\t== {}".format("Passed" if (a4 +b4 == c4) else "Failed", a4, b4, a4 + b4))        
- 
-if __name__ == "__main__":
-    
-    Testing()
-   

@@ -62,6 +62,6 @@ class Field:
         return self.__class__(x, self.p)
         
     #multiplication of integer and fields element  
-    def __rmul__(self, coefficient):
+    def __rmul__(self : object, coefficient : int) -> str:
         x = (self.x * coefficient) % self.p
         return self.__class__(x, self.p)
